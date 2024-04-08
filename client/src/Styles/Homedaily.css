@@ -1,0 +1,27 @@
+.home-daily-usage-div{
+    width: 100%;
+
+}
+
+.home-daily-usage-div .home-daily-head{
+    width: 100%;
+    text-align: center;
+}
+.home-daily-usage-div .home-daily-head h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+
+@media screen and (max-width: 769px) {
+    .home-daily-usage-div{
+        width: 100%;
+        /* height: 100%; */
+        
+    }
+  
+ 
+    
+    
+ }

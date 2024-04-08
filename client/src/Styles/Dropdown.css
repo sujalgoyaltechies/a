@@ -1,0 +1,10 @@
+.home-section-dropdown{
+    width: 100%;
+}
+
+.home-section-dropdown div{
+    width: 96.5%;
+    margin-left: 2%;
+    border-left: none;
+    border-right: none ;
+}

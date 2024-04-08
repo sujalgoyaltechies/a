@@ -1,0 +1,30 @@
+.home-usage-div{
+    width: 100%;
+    margin: 50px 0px;
+}
+
+.home-usage-div .home-usage-head{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   width: 100%;
+  
+}
+
+.home-usage-div .home-usage-main{
+    text-align: center;
+    /* display: flex; */
+    width: 100%;
+    
+}
+.home-usage-div .home-usage-main img{
+    width: 23%;
+    height: 33%;
+    margin: 10px 15px;
+}
+
+@media screen and (max-width : 765px) {
+    .home-usage-div{
+        margin-top: 100px;
+        width: 100%;
+    }
+}

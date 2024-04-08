@@ -1,0 +1,346 @@
+.nav-head{
+    background-color: #f7eedd;
+    width: 100%;
+    text-align: center;
+    height: 35px;
+    font-size: 10px;
+    letter-spacing: .06em;
+    line-height: 3.50;
+    position: relative;
+    }
+
+.nav-body{
+    margin-top: 10px;
+     width: 100%;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    
+.search-btn{
+    margin-inline-start: 2.5rem;
+    /* margin-top: 17px; */
+
+}
+
+    .nav-body .search-btn button{
+        background: none;
+        border: none;
+        color: #fe9c04;
+        transition: transform 0.3s ease-in-out;
+        
+ 
+    }
+    .nav-body .search-btn button:hover{
+        transform: scale(1.2);
+        cursor: pointer;
+ 
+    }
+
+.nav-body .logo{
+    text-align: center;
+}
+
+ 
+
+
+.nav-body-right{
+     display: flex;
+     justify-self: end;
+    margin-inline-end: 3.5rem;
+    /* margin-top: 17px; */
+}
+.nav-body-right .nav-avatar button{
+    background: none;
+    border: none;
+    color: #fe9c04;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-body-right .nav-avatar button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.nav-body-right .nav-cart button{
+    background: none;
+    border: none;
+    color: #fe9c04;
+    transition: transform 0.3s ease-in-out;
+}
+.nav-body-right .nav-cart button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+} 
+.main-navbar{
+    margin-top: 10px;
+}
+ul span{
+    color: #fe9c04;
+    font-size: 13px;
+    letter-spacing: .1rem;
+font-weight: 700;
+margin: 0px 30px;
+
+}
+
+ 
+ 
+@media (max-width: 1024px) {
+  ul span{
+    color: #fe9c04;
+    font-size: 13px;
+font-weight: 700;
+letter-spacing: 0rem;
+
+margin: 0px 30px;
+
+}
+}
+ 
+/* Style for drop-down content */
+.dropdown {
+    margin-top: 8px;
+    margin-left: -10px;
+    display: none;
+    width: 80%;
+    position: absolute;
+    background-color: #cf0000;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Style for drop-down items */
+.dropdown-item {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+/* Show drop-down on hover */
+li.nav-item:hover .dropdown {
+    display: block;
+}
+
+
+
+/* YourComponent.css */
+
+@media (max-width: 767px) and (min-width: 280px) {
+    .modal-container {
+      width: 90% !important;
+    }
+    
+  }
+  
+
+  @media (max-width: 280px) {
+    .image1 {
+      width: 100% !important; /* Set width to 100% for smaller devices */
+    }
+  }
+  @media (min-width: 360px) and (max-width: 540px) {
+    .image1 {
+      width: 300px !important; /* Set width to 100% for devices between 360px and 540px */
+    }
+  }
+  
+
+  .zoomable-image {
+    transition: transform 0.7s ease-in-out, cursor 0.7s ease-in-out; /* Add a smooth transition effect for transform and cursor */
+  }
+  
+  .zoomable-image:hover {
+    transform: scale(1.1); /* Set the desired scale factor on hover */
+    cursor: zoom-in; /* Change cursor to indicate zoom-in on hover */
+  }
+  
+
+
+  .left-navbar-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    background-color: white; /* Adjust the background color as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add box-shadow for a subtle effect */
+  }
+  
+
+
+  /* YourComponent.css */
+/* YourComponent.css */
+
+@keyframes displayImages {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-wrapper {
+  animation: displayImages 5s linear; /* Adjust the animation duration and timing function as needed */
+}
+
+.animated-image {
+  width: 220px;
+  height: 150px;
+  transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 426px) {
+  .nav-cart{
+    display: flex;
+  }
+  .nav-body-right{
+    justify-self: flex-start;
+    margin-inline-end: 0rem;
+    margin-top: 0px;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-body .logo{
+    text-align: center;
+    width: 150px;
+}
+
+}
+
+/* styles.css */
+@media (max-width: 280px) {
+  .special-li .nav-link span {
+    font-size: 11px;
+    /* Add any other styles specific to this li here */
+  }
+}
+
+.whatsapp-logo{
+  position: fixed;
+  bottom: 40px;
+  left: 30px;
+  bottom: 60px;
+  z-index: 10;
+}
+.whatsapp-logo img{
+  width: 10%;
+}
+.popup{
+  position: fixed;
+   left: 70px;
+  bottom: 110px;
+  z-index: 10;
+  width: 250px;
+  height: 250px;
+  background-color: #ffffff;
+  border: 1px solid grey;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation: slideIn 0.5s forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+ 
+ 
+.whatsapp-div-text{
+  text-align: center;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+.popup .btn-div{
+ 
+  text-align: -webkit-right;
+    width: 100%;
+}
+.popup .btn-div button{
+ 
+  background: none;
+  border: none;
+}
+/* .popup button{
+  border: none;
+  padding: 0px 30px;
+
+} */
+.chat-btn-div{
+  width: 100%;
+  /* justify-items: center; */
+  text-align: center;
+}
+.chat-btn{
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  font-size: large;
+  border-radius: 30px;
+  background: radial-gradient(circle at -1% 57.5%, rgb(19, 170, 82) 0%, rgb(0, 152, 64) 90%);
+}
+@media screen and (max-width:768px) {
+  .whatsapp-logo img{
+    width: 15%;
+  }
+  .popup{
+ 
+     left: 40px;
+    bottom: 110px;
+    
+    width: 250px;
+    height: 250px;
+    
+    
+  }
+}
+@media (width:280px) {
+  .popup{
+ 
+    left: 15px;
+   bottom: 110px;
+   
+   width: 250px;
+   height: 250px;
+   
+   
+ }
+}
+
+.searchDataContainer{
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+}
+.searchData{
+  display: flex;
+  /* background-color: green; */
+  
+}
+.searchDataDetail{
+   padding-left: 10px;
+}
+.searchDataText{
+width: 100%;
+}
+.searchDataPrice{
+width: 100%;
+}
+
+ 

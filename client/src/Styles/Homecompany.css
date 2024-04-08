@@ -1,0 +1,53 @@
+ .home-company-slider{
+    margin-top: 100px;
+    width: 100%;
+    background-color: #f6f6f6;
+ }
+ 
+.div1 {
+    width: 95%;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.div1 img {
+    display: block;
+     padding-left: 30px;
+     padding-right: 30px;
+ margin-top: 30px;
+ margin-bottom: 30px;
+ height: 120px;
+    /* margin: 0px 80px; */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    
+    
+    .home-company-slider{
+        padding-right: 42px;
+        margin-top: 100px;
+        width: 100%;
+        background-color: rgb(223, 222, 222);
+     }
+     .div1 {
+        width: 95%;
+        
+        
+         
+        
+        
+    }
+    .div1 img {
+      
+         padding-left: 10px;
+         padding-right: 10px;
+     
+    }
+}
+
+ 
+  

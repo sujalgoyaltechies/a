@@ -1,0 +1,376 @@
+      {/* <div style={{ textAlign: "start" }}>
+                    <div>
+                      <p>Size</p>
+                      <input
+                        type="radio"
+                        id="template--18952188363050__main-Size-0"
+                        name="Size" // Unique name for the "Size" group
+                        value="128 GB"
+                        form=""
+                        checked="checked"
+                        data-option-value="128 GB"
+                        style={{ marginRight: "5px" }}
+                      />
+                      <label
+                        htmlFor="template--18952188363050__main-Size-0"
+                        style={{ marginRight: "15px" }}
+                      >
+                        128 GB
+                      </label>
+                      <input
+                        type="radio"
+                        id="template--18952188363050__main-Size-1"
+                        name="Size" // Unique name for the "Size" group
+                        value="256 GB"
+                        form=""
+                        data-option-value="256 GB"
+                        style={{ marginRight: "5px" }}
+                      />
+                      <label
+                        htmlFor="template--18952188363050__main-Size-1"
+                        style={{ marginRight: "15px" }}
+                      >
+                        256 GB
+                      </label>
+                    </div>
+
+                    <div style={{ marginTop: "10px" }}>
+                      <p>WARRANTY</p>
+                      <input
+                        type="radio"
+                        id="template--18952188363050__main-Warranty-0"
+                        name="Warranty" // Unique name for the "Warranty" group
+                        value="6 Month"
+                        form=""
+                        checked="checked"
+                        data-option-value="6 Month"
+                        style={{ marginRight: "5px" }}
+                      />
+                      <label
+                        htmlFor="template--18952188363050__main-Warranty-0"
+                        style={{ marginRight: "15px" }}
+                      >
+                        6 Month
+                      </label>
+                      <input
+                        type="radio"
+                        id="template--18952188363050__main-Warranty-1"
+                        name="Warranty" // Unique name for the "Warranty" group
+                        value="12 Month"
+                        form=""
+                        data-option-value="12 Month"
+                        style={{ marginRight: "5px" }}
+                      />
+                      <label
+                        htmlFor="template--18952188363050__main-Warranty-1"
+                        style={{ marginRight: "15px" }}
+                      >
+                        12 Month
+                      </label>
+                    </div>
+                  </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       <div className="col-9">
+            <div className="p-3">
+              {/* Four Bootstrap Cards */}
+              <div className="row row-cols-1 row-cols-md-2 g-4">
+                <div className="home-fresh-body">
+                  {products.map((product) => (
+                    <div key={product._id} className="home-fresh-card">
+                      <div className="card-img">
+                        <Link to={`/product/${product._id}`}>
+                          <img
+                            src={`http://localhost:8080/${product.img}`}
+                            alt=""
+                          />
+                        </Link>
+                        <div className="card-cart-btn">
+                          {/* <button onClick={() => handleAddToCart(item)}>Add to cart</button> */}
+                        </div>
+                      </div>
+                      <div className="home-fresh-card-content">
+                        <div>
+                          <span>
+                            {" "}
+                            Refurbished {product.brand}, {product.memory}GB
+                            Ram, {product.storage}
+                            GB SSD
+                          </span>
+                        </div>
+                        <div className="price">
+                          <s>Rs . {product.originalPrice}</s>
+                          <span> Rs. {product.Price}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+                <Grid item xs={6}>
+              <FormControl fullWidth variant="outlined">
+                <InputLabel id="brand-label">Brand</InputLabel>
+                <Select
+                  label="Brand"
+                  labelId="brand-label"
+                  name="brand"
+                  value={formData.brand}
+                  onChange={handleChange}
+                  required
+                >
+                  <MenuItem value="dell">Dell</MenuItem>
+                  <MenuItem value="hp">Hp</MenuItem>
+                  <MenuItem value="lenovo">Lenovo</MenuItem>
+                  <MenuItem value="macbook">MacBook</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+
+               <div className="nav-head">
+          <span>Welcome to our store</span>
+        </div>
+        <div className="nav-body">
+          <div className="search-btn">
+            {/* <button>
+              <CiSearch style={{ width: "2rem", height: "2rem" }} />
+            </button> */}
+          </div>
+          <div className="logo">
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <h2>
+                <span style={{ color: "rgb(4 229 254)" }}>Lappy</span>{" "}
+                <span style={{ color: "#fe9c04" }}>Waley</span>
+              </h2>
+            </Link>
+          </div>
+          <div className="nav-body-right">
+            <div className="nav-avatar">
+              {user ? (
+                <div className="nav-cart">
+                  <button onClick={handleCartIconClick}>
+                    <CiShoppingCart style={{ width: "2rem", height: "2rem" }} />
+                    {cartLength > 0 && <sup>{cartLength}</sup>}
+                  </button>
+                  <Link to="/profile" style={{color:"#fe9c04"}} >
+                    <FaHome  style={{ width: "2rem", height: "2rem" }} />
+                  </Link>
+                </div>
+              ) : (
+                <button>
+                  <Link to="/login" style={{ color: "#f49d10c3" }}>
+                    <RxAvatar style={{ width: "2rem", height: "2rem" }} />
+                  </Link>
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="main-navbar">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li
+                    className="nav-item"
+                    onMouseEnter={handleHover}
+                    onMouseLeave={handleLeave}
+                    onKeyUp={handleKeyUp}
+                    tabIndex={0}
+                  >
+                    <Link className="nav-link" to="#">
+                      <span>SHOP BY BRAND</span>
+                    </Link>
+                    {showImages && (
+                      <div
+                        className="images-container"
+                        style={{
+                          position: "absolute",
+                          top: "50px",
+                          left: "0",
+                          zIndex: "100",
+                          background: "white",
+                          maxHeight: "400px",
+                          overflow: "hidden",
+                          opacity: "1",
+                          transition: "opacity 5s ease-in-out",
+                        }}
+                      >
+                        <div style={{ display: "flex" }}>
+                          <div style={{ marginRight: "10px",padding:"50px" }}>
+                            <img
+                              src="https://imgupscaler.com/images/samples/midjourney-after.webp"
+                              alt="Image 1"
+                              style={{ width: "150px", height: "150px" }}
+                            />
+                            <div className="image-title">Title 1</div>
+                          </div>
+                          <div style={{ marginRight: "10px",padding:"50px" }}>
+                            <img
+                              src="https://imgupscaler.com/images/samples/midjourney-after.webp"
+                              alt="Image 1"
+                              style={{ width: "150px", height: "150px" }}
+                            />
+                            <div className="image-title">Title 1</div>
+                          </div>
+                          <div style={{ marginRight: "10px",padding:"50px" }}>
+                            <img
+                              src="https://imgupscaler.com/images/samples/midjourney-after.webp"
+                              alt="Image 1"
+                              style={{ width: "150px", height: "150px" }}
+                            />
+                            <div className="image-title">Title 1</div>
+                          </div>
+                          <div style={{ marginRight: "10px",padding:"50px" }}>
+                            <img
+                              src="https://imgupscaler.com/images/samples/midjourney-after.webp"
+                              alt="Image 1"
+                              style={{ width: "150px", height: "150px" }}
+                            />
+                            <div className="image-title">Title 1</div>
+                          </div>
+                       
+                        </div>
+                      </div>
+                    )}
+                  </li>
+                  <li class="nav-item">
+                    <Link class="nav-link" to="#">
+                      <span>SHOP BY PRICE</span>
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link class="nav-link" to="#">
+                      <span>SHOP BY PROCESSOR</span>
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link class="nav-link" to="#">
+                      <span>SHOP BY USAGE</span>
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link class="nav-link" to="#">
+                      <span>CLEARANCE SALE</span>
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link class="nav-link" to="#">
+                      <span>CORPORATE ENQUIRIES</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+
+
+
+ const handleLogout = () => {
+    // Show confirmation dialog before logging out
+    confirmAlert({
+      title: "Confirm Logout",
+      message: "Are you sure you want to log out?",
+      buttons: [
+        {
+          label: "Yes",
+          onClick: () => {
+            try {
+              Cookies.remove("usertoken");
+              localStorage.clear("name");
+              console.log("Logout successful");
+            } catch (error) {
+              console.error("Error while logging out:", error);
+            }
+
+            // const navigate = useNavigate(); // Commented out if not using the hook
+
+            // Check if navigate is available (e.g., using react-router-dom v6)
+            if (navigate) {
+              navigate("/login");
+            }
+
+            // Reload the page
+            // window.location.reload();
+          },
+        },
+        {
+          label: "No",
+          onClick: () => {
+            // Do nothing if "No" is clicked
+            // console.log("Logout canceled");
+          },
+        },
+      ],
+    });
+  };
+
+
+
+
+
+     <Grid item xs={6}>
+              <FormControl fullWidth variant="outlined">
+                <InputLabel id="brand-label">Brand</InputLabel>
+                <Select
+                  label="Brand"
+                  labelId="brand-label"
+                  name="brand"
+                  value={formData.brand}
+                  onChange={handleChange}
+                  required
+                >
+                  <MenuItem value="dell">Dell</MenuItem>
+                  <MenuItem value="hp">Hp</MenuItem>
+                  <MenuItem value="lenovo">Lenovo</MenuItem>
+                  <MenuItem value="macbook">MacBook</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+
+              <Typography>Shipping Address: {order.shippingAddress.addressLine1},{order.shippingAddress.localArea}/ {order.shippingAddress.district} ({order.shippingAddress.pincode}),{order.shippingAddress.state},{order.shippingAddress.country}</Typography>

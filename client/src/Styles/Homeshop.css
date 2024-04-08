@@ -1,0 +1,99 @@
+.home-shop{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.home-shop-left{
+    width: 50%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.home-shop-right{
+    width: 50%;
+    justify-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.home-shop-logo img{
+     transition: 0.9s;
+    cursor: pointer;
+  
+}
+.home-shop-logo {
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.home-shop-logo img:hover{
+    transform: scale(1.1);
+    
+
+}
+
+@media screen and (max-width : 450px) {
+    .home-shop{
+       
+        display: flex;
+        flex-direction: column;
+    }
+    .home-shop-left{
+        width: 100%;
+          
+    }
+    .home-shop-right{
+        width: 100%;
+        justify-items: center;
+        
+    }
+    .home-shop-logo {
+         /* display: grid; */
+         grid-template-columns: 1fr 1fr;
+         justify-items :center;
+    }
+    .home-shop-logo img{
+        width: 85%;
+        height: 85%;
+    }
+    
+}
+@media (min-width: 450px) and (max-width : 769px) {
+    .home-shop{
+       
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .home-shop-left{
+        width: 90%;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .home-shop-right{
+        width: 90%;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .home-shop-logo {
+        /* display: grid; */
+        grid-template-columns: 1fr 1fr;
+        justify-items :center;
+   }
+   
+    
+}
+@media (min-width:770px) and (max-width:1024px){
+    .home-shop{
+        
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    
+}

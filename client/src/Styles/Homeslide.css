@@ -1,0 +1,21 @@
+@keyframes zoomIn {
+    from {
+      transform: scale(1.2);
+    }
+    to {
+      transform: scale(1); /* Adjust the scale value as needed */
+    }
+  }
+  
+  .zoom-in {
+    animation: zoomIn 1s ease-in-out;
+  }
+  .home-slider{
+    height: 300px;
+}
+
+  @media screen and (max-width : 769px) {
+    .home-slider{
+      height: 200px;
+  }
+  }
